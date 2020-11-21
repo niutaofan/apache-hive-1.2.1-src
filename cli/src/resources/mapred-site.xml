@@ -1,0 +1,16 @@
+<configuration>
+<!-- 通知框架MR使用YARN -->
+        <property>
+                  <name>mapreduce.framework.name</name>
+                  <value>yarn</value>
+        </property>
+ <property>
+      <name>mapreduce.map.output.compress</name>
+      <value>true</value>
+    </property>
+
+    <property>
+     <name>mapred.map.output.compress.codec</name>  
+     <value>org.apache.hadoop.io.compress.SnappyCodec</value>
+    </property>
+</configuration>

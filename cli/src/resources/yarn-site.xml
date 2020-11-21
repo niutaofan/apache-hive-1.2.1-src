@@ -1,0 +1,16 @@
+<configuration>
+
+<!-- Site specific YARN configuration properties -->
+<!-- 设置 resourcemanager 在哪一个主机上-->
+        <property>
+                <name>yarn.resourcemanager.hostname</name>
+                <value>localhost</value>
+        </property>
+<!-- reducer取数据的方式是mapreduce_shuffle -->
+        <property>
+                <name>yarn.nodemanager.aux-services</name>
+                <value>mapreduce_shuffle</value>
+        </property>
+
+
+</configuration>
