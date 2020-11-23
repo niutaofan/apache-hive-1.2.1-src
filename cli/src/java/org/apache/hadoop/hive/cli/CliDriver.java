@@ -48,7 +48,7 @@ import jline.console.completer.ArgumentCompleter;
 import jline.console.completer.ArgumentCompleter.ArgumentDelimiter;
 import jline.console.completer.ArgumentCompleter.AbstractArgumentDelimiter;
 
-import org.apache.calcite.rel.core.RelFactories;
+//import org.apache.calcite.rel.core.RelFactories;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -683,7 +683,8 @@ public class CliDriver {
     prompt = conf.getVar(HiveConf.ConfVars.CLIPROMPT);
     prompt = new VariableSubstitution().substitute(conf, prompt);
     prompt2 = spacesForString(prompt);
-
+    //todo 解决No FileSystem for scheme: hdfs
+//    conf.set("fs.hdfs.impl", "org.apache.hadoop.hdfs.DistributedFileSystem");
     SessionState.start(ss);
 
     // execute cli driver work
